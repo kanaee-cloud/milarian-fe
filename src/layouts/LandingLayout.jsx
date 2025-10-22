@@ -10,7 +10,7 @@ export const LandingLayout = () => {
             <div className="aurora absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-secondary via-accent to-purple-400 rounded-full blur-2xl opacity-25 animate-aurora3" />
 
             <div className="relative z-10 flex flex-col min-h-screen">
-                <div className="px-8 py-4">
+                <div className="px-4 py-2">
                     <Navbar />
                 </div>
                 <main className="flex-grow px-8">

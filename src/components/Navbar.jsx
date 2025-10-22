@@ -3,8 +3,7 @@ export const Navbar = () => {
     const item = [
         { name: "Home", link: "/" },
         { name: "About", link: "/about" },
-        { name: "Services", link: "/services" },
-        { name: "Contact", link: "/contact" },
+        { name: "UMKM", link: "/umkm" },
     ]
 
     return (

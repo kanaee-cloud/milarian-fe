@@ -13,6 +13,9 @@ export default {
         navy: "#27005D",
         blue: "#344CB7"
 
+      },
+      backgroundImage: {
+        hero: "url('/assets/hero.png')",
       }
     },
   },
