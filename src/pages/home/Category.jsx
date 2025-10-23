@@ -21,6 +21,18 @@ const Category = () => {
       name: "Jasa",
       icon: HardHat 
     },
+    {
+      name: "Jasa",
+      icon: HardHat 
+    },
+    {
+      name: "Jasa",
+      icon: HardHat 
+    },
+    {
+      name: "Jasa",
+      icon: HardHat 
+    },
     // {
     //   name: "Agribisnis",
     //   img: ""
@@ -32,7 +44,8 @@ const Category = () => {
   ]
 
   return (
-    <section className='min-h-screen  text-primary'>
+    <>
+    <section className='min-h-screen   text-primary'>
         <h1 className='font-semibold text-2xl'>Emang ada UMKM apa aja?</h1>
         <div className='grid grid-cols-4 gap-4'>
         {category.map((cat, index) => (
@@ -40,6 +53,7 @@ const Category = () => {
         ))}
         </div>
     </section>
+    </>
   )
 }
 
