@@ -40,7 +40,7 @@ const Review = () => {
                         768: { slidesPerView: 2 },
                         1024: { slidesPerView: 3 },
                     }}
-                    className="pb-12"
+                    className="pb-12 h-full"
                 >
                     {reviews.map((review, i) => (
                         <SwiperSlide key={i}>

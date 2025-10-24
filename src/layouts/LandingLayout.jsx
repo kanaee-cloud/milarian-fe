@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom"
 import { Navbar } from "../components/Navbar"
+import Footer from "../components/Footer"
 
 export const LandingLayout = () => {
     return (
@@ -16,6 +17,7 @@ export const LandingLayout = () => {
                 <main className="flex-grow px-8">
                     <Outlet />
                 </main>
+                <Footer />
             </div>
         </div>
     )

@@ -47,7 +47,7 @@ const Category = () => {
     <>
     <section className='min-h-screen   text-primary'>
         <h1 className='font-semibold text-2xl'>Emang ada UMKM apa aja?</h1>
-        <div className='grid grid-cols-4 gap-4'>
+        <div className='grid  grid-cols-2 md:grid-cols-4 gap-4'>
         {category.map((cat, index) => (
            <CategoryCard key={index} cat={cat}/>
         ))}
