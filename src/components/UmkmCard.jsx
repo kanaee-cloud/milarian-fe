@@ -4,7 +4,7 @@ export const UmkmCard = ({ umkm }) => {
 
   return (
     <div
-      className="glass-card p-4 rounded-xl hover:scale-105 transition-transform duration-200"
+      className="bg- text-light p-4 rounded-xl hover:scale-105 transition-transform duration-200"
     >
       <h3 className="font-semibold text-lg mb-1">
         {umkm.basicInfo.businessName}

@@ -45,7 +45,7 @@ const Category = () => {
 
   return (
     <>
-    <section className='min-h-screen   text-primary'>
+    <section className='min-h-screen   text-light'>
         <h1 className='font-semibold text-2xl'>Emang ada UMKM apa aja?</h1>
         <div className='grid  grid-cols-2 md:grid-cols-4 gap-4'>
         {category.map((cat, index) => (

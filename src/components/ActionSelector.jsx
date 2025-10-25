@@ -21,7 +21,7 @@ const ActionSelector = () => {
           onClick={() => setMode("search")}
           className={`px-4 py-2 rounded-xl transition-all duration-200 ${
             mode === "search"
-              ? "bg-accent text-primary font-bold"
+              ? "bg-accent text-light font-bold"
               : "bg-transparent border border-accent text-light hover:bg-accent/20"
           }`}
         >
@@ -32,7 +32,7 @@ const ActionSelector = () => {
           onClick={() => setMode("redirect")}
           className={`px-4 py-2 rounded-xl transition-all duration-200 ${
             mode === "redirect"
-              ? "bg-accent text-primary font-bold"
+              ? "bg-accent text-light font-bold"
               : "bg-transparent border border-accent text-light hover:bg-accent/20"
           }`}
         >

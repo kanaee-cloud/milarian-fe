@@ -7,11 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#000957',
-        accent: '#FFEB00',
+        primary: '#3D0000',
+        accent: '#FF0000',
         light: "#E4F1FF",
-        navy: "#27005D",
-        blue: "#344CB7"
+        red: "#950101",
+        gray: "#212121",
+        dark: "#171717"
 
       },
       backgroundImage: {
