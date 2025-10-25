@@ -5,7 +5,7 @@ export const CategoryCard = ({ cat }) => {
 
     return (
         <div className='
-      glass-card 
+        bg-gray
       relative 
       px-4 py-6 my-4 
       flex flex-col items-center justify-center text-center 
@@ -16,10 +16,10 @@ export const CategoryCard = ({ cat }) => {
     '>
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/30 via-accent/30 to-transparent opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500"></div>
             <div className="relative z-10 flex flex-col items-center">
-                <div className='p-4 bg-light/70 rounded-full mb-3 shadow-inner group-hover:shadow-lg transition-all duration-300'>
-                    <Icon className='text-4xl text-accent group-hover:text-primary transition-colors duration-300' />
+                <div className='p-4 bg-dark rounded-full mb-3 shadow-inner group-hover:shadow-lg transition-all duration-300'>
+                    <Icon className='text-4xl text-accent group-hover:text-light transition-colors duration-300' />
                 </div>
-                <h2 className='font-medium text-lg group-hover:text-accent transition-colors duration-300'>
+                <h2 className='text-light font-medium text-lg group-hover:text-light transition-colors duration-300'>
                     {cat.name}
                 </h2>
             </div>

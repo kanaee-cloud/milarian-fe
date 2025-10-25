@@ -7,12 +7,12 @@ export const Navbar = () => {
     ]
 
     return (
-        <nav className="flex justify-between shadow-md px-8 py-4 rounded-full bg-light/30 backdrop-blur-md items-center">
-            <h1 className="font-semibold text-lg text-primary">Milarian</h1>
+        <nav className="flex justify-between shadow-md px-8 py-4 rounded-full bg-dark/70 backdrop-blur-md items-center">
+            <h1 className="font-semibold text-lg text-light">Milarian</h1>
             <ul className="flex gap-6">
                 {item.map((navItem, index) => (
                     <li key={index}>
-                        <a href={navItem.link} className="text-primary font-medium hover:text-accent">
+                        <a href={navItem.link} className="text-light font-medium hover:text-accent">
                             {navItem.name}
                         </a>
                     </li>
