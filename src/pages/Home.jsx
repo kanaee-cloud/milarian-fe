@@ -9,8 +9,8 @@ const Home = () => {
     <>
       <Hero />
       <Category />
-      <Review />
       <UmkmList />
+      <Review />
     </>
   )
 }

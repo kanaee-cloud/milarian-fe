@@ -44,7 +44,7 @@ const Review = () => {
                 >
                     {reviews.map((review, i) => (
                         <SwiperSlide key={i}>
-                            <div className="glass-card rounded-2xl shadow-lg p-6 mx-4 border hover:scale-105 transition-transform duration-200">
+                            <div className="bg-gray/70 rounded-2xl shadow-lg p-6 mx-4  hover:scale-105 transition-transform duration-200">
                                 <p className="text-gray-700 italic mb-4">
                                     “{review.text}”
                                 </p>
