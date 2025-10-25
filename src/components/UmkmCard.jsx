@@ -8,8 +8,7 @@ export const UmkmCard = ({ umkm }) => {
   return (
     <div className="w-full max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white border border-gray-200">
       <div
-        className="h-48 bg-cover bg-center relative"
-        style={{ backgroundImage: url('/assets/hero.png') }} // nanti tinggal di refer ke umkm.documentation.photo
+        className="h-48 bg-hero bg-cover bg-center relative"
       >
         <div className="absolute inset-0 bg-black/10"></div>
       </div>
