@@ -19,7 +19,7 @@ const ActionSelector = () => {
       <div className="flex justify-center gap-3 mb-6">
         <button
           onClick={() => setMode("search")}
-          className={`px-4 py-2 rounded-xl transition-all duration-200 ${
+          className={`md:text-md text-sm px-4 py-2 rounded-xl transition-all duration-200 ${
             mode === "search"
               ? "bg-accent text-light font-bold"
               : "bg-transparent border border-accent text-light hover:bg-accent/20"
@@ -30,7 +30,7 @@ const ActionSelector = () => {
 
         <button
           onClick={() => setMode("redirect")}
-          className={`px-4 py-2 rounded-xl transition-all duration-200 ${
+          className={`md:text-md text-sm px-4 py-2 rounded-xl transition-all duration-200 ${
             mode === "redirect"
               ? "bg-accent text-light font-bold"
               : "bg-transparent border border-accent text-light hover:bg-accent/20"
@@ -57,8 +57,8 @@ const ActionSelector = () => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-                placeholder="Coba jelasin kamu lagi pengen apa"
-                className="w-full px-4 py-4 pr-12 rounded-full bg-light/10 border border-light/20 focus:outline-none text-light placeholder:text-light/50"
+                placeholder="Lagi pengen apa?"
+                className="w-full md:text-md text-sm px-4 py-4 pr-12 rounded-full bg-light/10 border border-light/20 focus:outline-none text-light placeholder:text-light/50"
               />
 
 

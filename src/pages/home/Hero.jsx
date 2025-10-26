@@ -9,9 +9,9 @@ const Hero = () => {
 
       <div className="relative z-10 text-light">
         <div className='mb-6'>
-            <h1 className="text-4xl font-bold text-left">Milarian: Apa yang kamu Cari? <br />Temukan UMKM Terbaik di Sini.</h1>
+            <h1 className="md:text-4xl text-xl font-bold text-left">Milarian: Apa yang kamu Cari? <br />Temukan UMKM Terbaik di Sini.</h1>
         </div>
-        <div className="glass-card px-6 py-8 rounded-2xl max-w-md">
+        <div className="glass-card px-6 py-8 rounded-2xl max-w-xl">
           <ActionSelector />
         </div>
       </div>

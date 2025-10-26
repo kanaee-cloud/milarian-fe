@@ -1,50 +1,44 @@
 export const dataUmkm = [
   {
     basicInfo: {
-      businessName: 'Kedai Kopi "Senja di Kampus"',
-      ownerName: 'Budi Santoso',
+      businessName: 'Ruang Cukur',
+      ownerName: 'Krisna Gustian',
       shortDescription:
-        'Kedai kopi dengan spesialisasi biji kopi lokal Jawa Barat, tempat nyaman untuk tugas.',
-      fullAddress: 'Jl. Pendidikan No. 123, Bandung',
+        'Barbershop modern dengan layanan lengkap untuk pria dan anak-anak.',
+      fullAddress: 'Jl. Yupiter Utama III E2 No. 107, Bandung',
       mapCoordinates: {
         latitude: -6.9175,
         longitude: 107.6191,
       },
-      contact: '81234567890',
-      yearEstablished: 2022,
+      contact: '0851-5694-2183',
+      yearEstablished: 2021,
       businessLegalStatus: 'Perorangan',
       businessIdentificationNumber: 'Ada / Tidak Ada',
     },
     productsAndServices: {
-      category: 'Jasa (Kuliner Minuman)',
-      featuredProduct: 'Es Kopi Susu Gula Aren "Senja"',
+      category: 'Jasa Potong Rambut',
+      featuredProduct: 'Potong Rambut + Cuci + Styling',
       priceRange: {
-        min: 18000,
-        max: 30000,
+        min: 35000,
+        max: 100000,
       },
-      targetMarket: ['Mahasiswa', 'Dosen'],
-      usp: 'Menggunakan 100% biji kopi Arabika dari Gunung Puntang',
+      targetMarket: ['Pelajar', 'Mahasiswa', 'Profesional Muda'],
+      usp: 'cutting hair is easy, cutting good hair is not easy',
       certification: 'Halal (sedang proses)',
     },
     operational: {
-      operatingHours: '09:00 - 22:00 (Senin-Sabtu)',
+      operatingHours: '10:00 - 20:00 (Senin-Sabtu)',
       numberOfEmployees: 3,
-      capacity: '20 tempat duduk, +/- 100 gelas per hari',
+      capacity: '2 tempat duduk untuk cukur',
     },
     marketingAndDigital: {
       socialMedia: {
-        instagram: '@kopisenjacampus',
+        instagram: '@ruangcukurstore',
       },
       marketplace: null,
-      deliveryApps: ['GoFood', 'GrabFood'],
+      deliveryApps: null,
       website: null,
       paymentMethods: ['Tunai', 'QRIS', 'Debit'],
-    },
-    qualitative: {
-      mainChallenge:
-        'Persaingan ketat dengan kedai kopi lain di sekitar kampus.',
-      currentNeed:
-        'Pelatihan membuat konten video untuk promosi di Instagram/TikTok.',
     },
     documentation: {
       photos: ['Foto Fasad Toko', 'Foto Produk Unggulan', 'Foto Suasana'],
@@ -52,10 +46,54 @@ export const dataUmkm = [
   },
   {
     basicInfo: {
-      businessName: 'Bakso Pak Kumis',
-      ownerName: 'Ahmad Kurniawan',
-      shortDescription: 'Bakso urat legendaris dengan kuah kaldu sapi asli.',
-      fullAddress: 'Jl. Merdeka No. 50, Bandung',
+      businessName: 'Ju-e Kopi Vietnam',
+      ownerName: 'Kopi Baik',
+      shortDescription: 'Kedai kopi spesialis kopi Vietnam dengan cita rasa autentik.',
+      fullAddress: 'Jl. Taman Cibeunying Utara, Bandung',
+      mapCoordinates: {
+        latitude: -6.915,
+        longitude: 107.61,
+      },
+      contact: '0852-6857-3000',
+      yearEstablished: 2022,
+      businessLegalStatus: 'Perorangan',
+      businessIdentificationNumber: 'Ada / Tidak Ada',
+    },
+    productsAndServices: {
+      category: 'Kuliner Makanan',
+      featuredProduct: 'Bakso Urat Spesial + Tetelan',
+      priceRange: {
+        min: 8000,
+        max: 35000,
+      },
+      targetMarket: ['Mahasiswa', 'Pelajar', 'Keluarga'],
+      usp: 'Kopi vietnam autentik dengan bahan berkualitas',
+      certification: 'Halal (sudah tersertifikasi)',
+    },
+    operational: {
+      operatingHours: '10:00 - 22:00 (Setiap Hari)',
+      numberOfEmployees: 2,
+      capacity: 'Kursi Kecil di dalam kedai, layanan bawa pulang',
+    },
+    marketingAndDigital: {
+      socialMedia: {
+        instagram: '@juekopi',
+      },
+      marketplace: null,
+      deliveryApps: ['GoFood', 'GrabFood', 'ShopeeFood'],
+      website: null,
+      paymentMethods: ['Tunai', 'QRIS'],
+    },
+    documentation: {
+      photos: ['Foto Mangkuk Bakso', 'Foto Suasana Kedai'],
+    },
+  },
+  {
+    basicInfo: {
+      businessName: 'Ju-e Kopi Vietnam',
+      ownerName: 'Kopi Baik',
+      shortDescription: 'Kedai kopi spesialis kopi Vietnam dengan cita rasa autentik.',
+      fullAddress: 'Jl. Taman Cibeunying Utara, Bandung',
       mapCoordinates: {
         latitude: -6.915,
         longitude: 107.61,
@@ -69,30 +107,26 @@ export const dataUmkm = [
       category: 'Kuliner Makanan',
       featuredProduct: 'Bakso Urat Spesial + Tetelan',
       priceRange: {
-        min: 20000,
+        min: 8000,
         max: 35000,
       },
-      targetMarket: ['Keluarga', 'Pekerja Kantoran', 'Mahasiswa'],
+      targetMarket: ['Mahasiswa', 'Pelajar', 'Keluarga'],
       usp: 'Daging sapi pilihan, tanpa pengawet',
       certification: 'Halal (sudah tersertifikasi)',
     },
     operational: {
-      operatingHours: '10:00 - 21:00 (Setiap Hari)',
-      numberOfEmployees: 5,
-      capacity: '30 tempat duduk',
+      operatingHours: '10:00 - 22:00 (Setiap Hari)',
+      numberOfEmployees: 2,
+      capacity: 'Kursi Kecil di dalam kedai, layanan bawa pulang',
     },
     marketingAndDigital: {
       socialMedia: {
-        instagram: '@baksopakkumis',
+        instagram: '@juekopi',
       },
       marketplace: null,
       deliveryApps: ['GoFood', 'GrabFood', 'ShopeeFood'],
-      website: 'baksopakkumis.com',
+      website: null,
       paymentMethods: ['Tunai', 'QRIS'],
-    },
-    qualitative: {
-      mainChallenge: 'Kenaikan harga bahan baku (daging sapi).',
-      currentNeed: 'Manajemen stok digital.',
     },
     documentation: {
       photos: ['Foto Mangkuk Bakso', 'Foto Suasana Kedai'],

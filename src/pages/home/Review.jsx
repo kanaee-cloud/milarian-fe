@@ -25,7 +25,7 @@ const reviews = [
 
 const Review = () => {
     return (
-        <section className="min-h-screen" id="review">
+        <section className="min-h-screen flex items-center justify-center">
             <div className="max-w-6xl mx-auto px-6 text-center">
                 <h2 className="text-3xl font-bold mb-2 text-navy">Apa kata mereka?</h2>
                 <div className="w-20 h-1 bg-accent mx-auto mb-10 rounded-full"></div>
