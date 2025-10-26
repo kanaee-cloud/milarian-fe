@@ -3,7 +3,7 @@ import ActionSelector from '../../components/ActionSelector'
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex justify-left px-8 items-center bg-hero bg-cover bg-center  my-6 rounded-2xl overflow-hidden">
+    <section className="relative min-h-screen flex justify-left px-8 items-center bg-hero bg-cover bg-center  my-6 rounded-2xl overflow-hidden mt-11">
       <div className="absolute inset-0 bg-black/60"></div>
 
 
