@@ -132,4 +132,92 @@ export const dataUmkm = [
       photos: ['Foto Mangkuk Bakso', 'Foto Suasana Kedai'],
     },
   },
+  {
+    basicInfo: {
+      businessName: 'BMC Juice',
+      ownerName: ' Ibnu',
+      shortDescription: 'Kuliner yang menyediakan aneka ragam jus buah, smoothies',
+      fullAddress: 'Jl. Sukabirus,Telkom University (gate 3,5), Kabupaten Bandung',
+      mapCoordinates: {
+        latitude: -6.915,
+        longitude: 107.61,
+      },
+      contact: '082312847518',
+      yearEstablished: 2024,
+      businessLegalStatus: 'Perorangan',
+      businessIdentificationNumber: 'Ada / Tidak Ada',
+    },
+    productsAndServices: {
+      category: 'Kuliner Minuman',
+      featuredProduct: 'Smoothies Mangga',
+      priceRange: {
+        min: 8000,
+        max: 15000,
+      },
+      targetMarket: ['Mahasiswa', 'Pelajar', 'Keluarga'],
+      usp: 'Sekali Coba Langsung Jatuh Hati',
+      certification: '-',
+    },
+    operational: {
+      operatingHours: '08:00 - 23:00 (Senin - Minggu)',
+      numberOfEmployees: 4,
+      capacity: 'Sekitar 20 bangku',
+    },
+    marketingAndDigital: {
+      socialMedia: {
+        instagram: '@bmc.juice',
+      },
+      marketplace: null,
+      deliveryApps: ['GoFood', 'GrabFood', 'ShopeeFood'],
+      website: null,
+      paymentMethods: ['Tunai', 'QRIS'],
+    },
+    documentation: {
+      photos: ['Foto Mangkuk Bakso', 'Foto Suasana Kedai'],
+    },
+  },
+  {
+    basicInfo: {
+      businessName: 'Bos Laptop IT',
+      ownerName: 'Ismail',
+      shortDescription: 'Tempat servis dan jual laptop',
+      fullAddress: 'Jl. Mangga Dua No.92, Kabupaten Bandung',
+      mapCoordinates: {
+        latitude: -6.915,
+        longitude: 107.61,
+      },
+      contact: '-082322222646',
+      yearEstablished: 2019,
+      businessLegalStatus: 'Perorangan',
+      businessIdentificationNumber: 'Ada / Tidak Ada',
+    },
+    productsAndServices: {
+      category: 'Jasa Servis',
+      featuredProduct: 'Servis Laptop',
+      priceRange: {
+        min: "Tergantung Kebutuhan Pelanggan",
+        max: "Tergantung Kebutuhan Pelanggan",
+      },
+      targetMarket: ['Mahasiswa', 'Pelajar', 'Keluarga'],
+      usp: '-',
+      certification: '-',
+    },
+    operational: {
+      operatingHours: '10:00 - 22:00 (Senin - Minggu)',
+      numberOfEmployees: 1,
+      capacity: 'Tigas kursi kecil untuk menunggu proses servis',
+    },
+    marketingAndDigital: {
+      socialMedia: {
+        instagram: '@bosslaptop.it',
+      },
+      marketplace: null,
+      deliveryApps: '-',
+      website: null,
+      paymentMethods: ['Tunai', 'QRIS'],
+    },
+    documentation: {
+      photos: ['Foto Mangkuk Bakso', 'Foto Suasana Kedai'],
+    },
+  },
 ]
