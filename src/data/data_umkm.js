@@ -16,7 +16,7 @@ export const dataUmkm = [
       businessIdentificationNumber: 'Ada / Tidak Ada',
     },
     productsAndServices: {
-      category: 'Jasa Potong Rambut',
+      category: 'Jasa',
       featuredProduct: 'Potong Rambut + Cuci + Styling',
       priceRange: {
         min: 35000,
@@ -61,7 +61,7 @@ export const dataUmkm = [
       businessIdentificationNumber: 'Ada / Tidak Ada',
     },
     productsAndServices: {
-      category: 'Kuliner Makanan',
+      category: 'Kuliner',
       featuredProduct: 'Bakso Urat Spesial + Tetelan',
       priceRange: {
         min: 8000,
@@ -106,7 +106,7 @@ export const dataUmkm = [
       businessIdentificationNumber: 'Ada / Tidak Ada',
     },
     productsAndServices: {
-      category: 'Kuliner Makanan',
+      category: 'Kuliner',
       featuredProduct: 'Curry Rice Spesial + Ayam Katsu',
       priceRange: {
         min: 15000,
@@ -152,7 +152,7 @@ export const dataUmkm = [
       businessIdentificationNumber: 'Ada / Tidak Ada',
     },
     productsAndServices: {
-      category: 'Kuliner Minuman',
+      category: 'Kuliner',
       featuredProduct: 'Smoothies Mangga',
       priceRange: {
         min: 8000,
@@ -196,7 +196,7 @@ export const dataUmkm = [
       businessIdentificationNumber: 'Ada / Tidak Ada',
     },
     productsAndServices: {
-      category: 'Jasa Servis',
+      category: 'Jasa',
       featuredProduct: 'Servis Laptop',
       priceRange: {
         min: 'Tergantung Kebutuhan Pelanggan',
@@ -238,7 +238,7 @@ export const dataUmkm = [
       businessIdentificationNumber: 'Ada / Tidak Ada',
     },
     productsAndServices: {
-      category: 'Jasa Fotocopy',
+      category: 'Jasa',
       featuredProduct: 'Produk ATK + Fotocopy + Penjilidan',
       priceRange: {
         min: 2000,
