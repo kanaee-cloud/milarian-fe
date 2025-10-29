@@ -48,7 +48,8 @@ export const dataUmkm = [
     basicInfo: {
       businessName: 'Ju-e Kopi Vietnam',
       ownerName: 'Kopi Baik',
-      shortDescription: 'Kedai kopi spesialis kopi Vietnam dengan cita rasa autentik.',
+      shortDescription:
+        'Kedai kopi spesialis kopi Vietnam dengan cita rasa autentik.',
       fullAddress: 'Jl. Taman Cibeunying Utara, Bandung',
       mapCoordinates: {
         latitude: -6.915,
@@ -92,7 +93,8 @@ export const dataUmkm = [
     basicInfo: {
       businessName: 'Tokokari',
       ownerName: ' Adryan Septadani',
-      shortDescription: 'Kuliner curry rice khas jepang dengan cita rasa autentik.',
+      shortDescription:
+        'Kuliner curry rice khas jepang dengan cita rasa autentik.',
       fullAddress: 'Jl. Taman Cibeunying Utara, Bandung',
       mapCoordinates: {
         latitude: -6.915,
@@ -136,8 +138,10 @@ export const dataUmkm = [
     basicInfo: {
       businessName: 'BMC Juice',
       ownerName: ' Ibnu',
-      shortDescription: 'Kuliner yang menyediakan aneka ragam jus buah, smoothies',
-      fullAddress: 'Jl. Sukabirus,Telkom University (gate 3,5), Kabupaten Bandung',
+      shortDescription:
+        'Kuliner yang menyediakan aneka ragam jus buah, smoothies',
+      fullAddress:
+        'Jl. Sukabirus,Telkom University (gate 3,5), Kabupaten Bandung',
       mapCoordinates: {
         latitude: -6.915,
         longitude: 107.61,
@@ -186,7 +190,7 @@ export const dataUmkm = [
         latitude: -6.915,
         longitude: 107.61,
       },
-      contact: '-082322222646',
+      contact: '082322222646',
       yearEstablished: 2019,
       businessLegalStatus: 'Perorangan',
       businessIdentificationNumber: 'Ada / Tidak Ada',
@@ -195,8 +199,8 @@ export const dataUmkm = [
       category: 'Jasa Servis',
       featuredProduct: 'Servis Laptop',
       priceRange: {
-        min: "Tergantung Kebutuhan Pelanggan",
-        max: "Tergantung Kebutuhan Pelanggan",
+        min: 'Tergantung Kebutuhan Pelanggan',
+        max: 'Tergantung Kebutuhan Pelanggan',
       },
       targetMarket: ['Mahasiswa', 'Pelajar', 'Keluarga'],
       usp: '-',
@@ -218,6 +222,48 @@ export const dataUmkm = [
     },
     documentation: {
       photos: ['Foto Mangkuk Bakso', 'Foto Suasana Kedai'],
+    },
+  },
+  {
+    basicInfo: {
+      businessName: 'Tunggal Digital Photocopy & Printing',
+      ownerName: 'Pak Liman',
+      shortDescription: 'Tempat membeli kebutuhan ATK, fotocopy dan penjilidan',
+      fullAddress:
+        'Jl. Sukabirus No.65, Citeureup, Kec. Dayeuhkolot, Kabupaten Bandung',
+      mapCoordinates: 'https://maps.app.goo.gl/e5SPAtNzhywaH9YVA',
+      contact: '08996113328',
+      yearEstablished: 2019,
+      businessLegalStatus: 'Perkelompok',
+      businessIdentificationNumber: 'Ada / Tidak Ada',
+    },
+    productsAndServices: {
+      category: 'Jasa Fotocopy',
+      featuredProduct: 'Produk ATK + Fotocopy + Penjilidan',
+      priceRange: {
+        min: 2000,
+        max: 'Tergantung Kebutuhan Pelanggan',
+      },
+      targetMarket: ['Mahasiswa', 'Pelajar', 'Keluarga'],
+      usp: '-',
+      certification: '-',
+    },
+    operational: {
+      operatingHours: '06:00 - 10:00 (Senin - Minggu)',
+      numberOfEmployees: 3,
+      capacity: 'Janji temu online, Layanan di tempat',
+    },
+    marketingAndDigital: {
+      socialMedia: {
+        instagram: '@tunggal.fotocopy',
+      },
+      marketplace: null,
+      deliveryApps: null,
+      website: null,
+      paymentMethods: ['Tunai', 'QRIS'],
+    },
+    documentation: {
+      photos: ['Foto Tempat', 'Foto Suasana'],
     },
   },
 ]
