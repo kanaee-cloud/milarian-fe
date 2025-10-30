@@ -41,7 +41,9 @@ export const dataUmkm = [
       paymentMethods: ['Tunai', 'QRIS', 'Debit'],
     },
     documentation: {
-      photos: ['Foto Fasad Toko', 'Foto Produk Unggulan', 'Foto Suasana'],
+      photos: {
+        cover: "https://lh3.googleusercontent.com/p/AF1QipOx838EQX65MNgc1Hvqjys4Ok6Sreu_NMs9ihiE=s1360-w1360-h1020-rw"
+      },
     },
   },
   {
@@ -86,7 +88,9 @@ export const dataUmkm = [
       paymentMethods: ['Tunai', 'QRIS'],
     },
     documentation: {
-      photos: ['Foto Mangkuk Bakso', 'Foto Suasana Kedai'],
+      photos: {
+        cover: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxKgjgY2hhnHTRs7cv9pG3AQgH4G5VZdrPLnI1g1o4NuHvHlxiUvsL8KORY0sA3WG5P-FATGH_WNXQJ2wSCQZk2516KIC1zOITSCJP9iYW_FRK1P4-UwC0IPY_p3p0HVX2SAwsm=s1360-w1360-h1020-rw"
+      },
     },
   },
   {
@@ -131,7 +135,9 @@ export const dataUmkm = [
       paymentMethods: ['Tunai', 'QRIS'],
     },
     documentation: {
-      photos: ['Foto Mangkuk Bakso', 'Foto Suasana Kedai'],
+      photos: {
+        cover: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSws_Aj1yoSI_N5Vj5_GASzYXprtJ4uaGECzjS9VpLVIC2ChedatPxqQRaI5XkL4jR2NhGEexkdM_sKwrHOk9Zs73_q5UqDIIyzTzYW81ciJ9wmof5IELBvgpOubY5kS0zOuPO6O=s1360-w1360-h1020-rw"
+    },
     },
   },
   {
@@ -223,7 +229,9 @@ export const dataUmkm = [
       paymentMethods: ['Tunai', 'QRIS'],
     },
     documentation: {
-      photos: ['Foto Mangkuk Bakso', 'Foto Suasana Kedai'],
+      photos: {
+        cover: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSz25hz7AGm4_R7uiQPC4HHeFhLfPi05h1CsQwwTIUkLFU7uCyfayLhuTNpaYAwKWiIqCtsJBhtP_aaTncmQ3Whp_audMKJ9WGZ1aJUxufIYRY9bL2hLlL8bDgjoSyDSnJPDOHSL=s1360-w1360-h1020-rw"
+      },
     },
   },
   {

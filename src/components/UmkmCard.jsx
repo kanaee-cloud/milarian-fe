@@ -1,22 +1,31 @@
-import { MapPin, Clock } from 'lucide-react'
+import { MapPin, Clock } from "lucide-react";
+import { useModal } from "../context/ModalContext";
+
 
 const formatPrice = (min, max) => {
-  return `Rp${(min / 1000).toFixed(0)}K - ${(max / 1000).toFixed(0)}K`
-}
+  return `Rp${(min / 1000).toFixed(0)}K - ${(max / 1000).toFixed(0)}K`;
+};
 
 const truncateText = (text, maxLength) => {
   if (!text) return "";
   return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
 };
 
-export const UmkmCard = ({ umkm, onDetail }) => {
+export const UmkmCard = ({ umkm }) => {
+  const { openModal } = useModal();
+
   return (
     <div className="w-full max-w-sm h-[480px] flex flex-col justify-between rounded-2xl overflow-hidden shadow-lg bg-white border border-gray-200 hover:scale-105 transition-transform duration-200">
-      <div className="h-48 bg-hero bg-cover bg-center relative">
+       <div className="h-48 relative">
+        <img
+          src={umkm.documentation?.photos?.cover || "/placeholder.jpg"}
+          alt={umkm.basicInfo?.businessName || "Foto UMKM"}
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
         <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
-      {/* Konten */}
       <div className="p-6 flex flex-col justify-between flex-1">
         <div>
           <div className="flex justify-between items-start mb-2">
@@ -47,7 +56,9 @@ export const UmkmCard = ({ umkm, onDetail }) => {
               </span>
             ))}
             {umkm.productsAndServices.targetMarket.length > 3 && (
-              <span className="text-xs text-gray-400">+{umkm.productsAndServices.targetMarket.length - 3} lainnya</span>
+              <span className="text-xs text-gray-400">
+                +{umkm.productsAndServices.targetMarket.length - 3} lainnya
+              </span>
             )}
           </div>
 
@@ -64,12 +75,13 @@ export const UmkmCard = ({ umkm, onDetail }) => {
           </div>
         </div>
 
-        <button 
-          onClick={() => onDetail(umkm)}
-          className="mt-6 w-full bg-primary text-white py-3 px-4 rounded-xl font-semibold text-sm hover:bg-primary/90 transition">
+        <button
+          onClick={() => openModal(umkm)} 
+          className="mt-6 w-full bg-primary text-white py-3 px-4 rounded-xl font-semibold text-sm hover:bg-primary/90 transition"
+        >
           Detail
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
