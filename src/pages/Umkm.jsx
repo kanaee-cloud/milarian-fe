@@ -4,6 +4,7 @@ import { UmkmCard } from "../components/UmkmCard";
 import { UmkmFilter } from "../components/UmkmFilter";
 
 
+
 const Umkm = () => {
   const { umkmList } = useUmkm();
   const [selectedCategory, setSelectedCategory] = useState("Semua");
