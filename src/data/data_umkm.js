@@ -182,6 +182,52 @@ export const dataUmkm = [
   },
   {
     basicInfo: {
+      businessName: 'Kedai Roti Ibu Saya',
+      ownerName: 'Helen Chu',
+      shortDescription:
+        'Kedai Roti Murah serba lima ribu, suasana vintage dan penuh kehangatan.',
+      fullAddress:
+        'Jl. Tamansari No.66, Lb. Siliwangi, Kecamatan Coblong, Kota Bandung',
+      mapCoordinates: {
+        latitude: -6.915,
+        longitude: 107.61,
+      },
+      contact: '081315971723',
+      yearEstablished: null,
+      businessLegalStatus: 'Perorangan',
+      businessIdentificationNumber: 'Ada / Tidak Ada',
+    },
+    productsAndServices: {
+      category: 'Kuliner',
+      featuredProduct: 'Roti Kopi Susu',
+      priceRange: {
+        min: 4000,
+        max: 30000,
+      },
+      targetMarket: ['Mahasiswa', 'Pelajar', 'Keluarga'],
+      usp: 'Sekali Coba Langsung Jatuh Hati',
+      certification: '-',
+    },
+    operational: {
+      operatingHours: '08:00 - 21:30 (Senin - Minggu)',
+      numberOfEmployees: 4,
+      capacity: 'Sekitar 20 meja',
+    },
+    marketingAndDigital: {
+      socialMedia: {
+        instagram: '@cumalimaribu',
+      },
+      marketplace: null,
+      deliveryApps: ['GoFood', 'GrabFood', 'ShopeeFood'],
+      website: null,
+      paymentMethods: ['Tunai', 'QRIS'],
+    },
+    documentation: {
+      photos: ['Foto Mangkuk Bakso', 'Foto Suasana Kedai'],
+    },
+  },
+  {
+    basicInfo: {
       businessName: 'Bos Laptop IT',
       ownerName: 'Ismail',
       shortDescription: 'Tempat servis dan jual laptop',

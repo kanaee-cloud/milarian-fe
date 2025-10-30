@@ -9,7 +9,7 @@ const truncateText = (text, maxLength) => {
   return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
 };
 
-export const UmkmCard = ({ umkm }) => {
+export const UmkmCard = ({ umkm, onDetail }) => {
   return (
     <div className="w-full max-w-sm h-[480px] flex flex-col justify-between rounded-2xl overflow-hidden shadow-lg bg-white border border-gray-200 hover:scale-105 transition-transform duration-200">
       <div className="h-48 bg-hero bg-cover bg-center relative">
@@ -64,7 +64,9 @@ export const UmkmCard = ({ umkm }) => {
           </div>
         </div>
 
-        <button className="mt-6 w-full bg-primary text-white py-3 px-4 rounded-xl font-semibold text-sm hover:bg-primary/90 transition">
+        <button 
+          onClick={() => onDetail(umkm)}
+          className="mt-6 w-full bg-primary text-white py-3 px-4 rounded-xl font-semibold text-sm hover:bg-primary/90 transition">
           Detail
         </button>
       </div>

@@ -48,6 +48,7 @@ const Review = () => {
                                 <p className="text-gray-700 italic mb-4">
                                     “{review.text}”
                                 </p>
+                                <hr className=" border-2 opacity-70 border-accent"/>
                                 <div className="mt-4">
                                     <h3 className="text-navy font-semibold">{review.name}</h3>
                                     <span className="text-blue text-sm">{review.job}</span>
