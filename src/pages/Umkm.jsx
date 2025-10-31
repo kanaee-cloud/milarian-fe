@@ -1,49 +1,44 @@
-import React, { useState, useMemo } from "react";
+import React, { useEffect, useState } from "react";
+import { useSearch } from "../context/SearchContext";
 import { useUmkm } from "../hooks/useUmkm";
 import { UmkmCard } from "../components/UmkmCard";
-import { UmkmFilter } from "../components/UmkmFilter";
-
-
+import SearchBar from "../components/search/SearchBar";
 
 const Umkm = () => {
-  const { umkmList } = useUmkm();
-  const [selectedCategory, setSelectedCategory] = useState("Semua");
+  const { umkmList } = useUmkm(); 
+  const { searchQuery, setSearchQuery } = useSearch();
+  const [filtered, setFiltered] = useState([]);
 
-  const filteredUmkm = useMemo(() => {
-    if (selectedCategory === "Semua") return umkmList;
-    return umkmList.filter(
-      (u) =>
-        u.productsAndServices.category.toLowerCase() ===
-        selectedCategory.toLowerCase()
+  useEffect(() => {
+    const lower = searchQuery.toLowerCase();
+    const result = umkmList.filter((item) =>
+      item.basicInfo.businessName.toLowerCase().includes(lower)
     );
-  }, [umkmList, selectedCategory]);
+    setFiltered(result);
+  }, [searchQuery, umkmList]);
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-5 mb-10 mt-14">
-      <h1 className="text-3xl font-bold text-center mb-5 text-navy">
+    <section className="min-h-screen flex flex-col items-center px-5 mt-14 mb-10">
+      <h1 className="text-3xl font-bold text-center mb-5 text-light">
         Daftar UMKM
       </h1>
-      <div className="w-20 h-1 bg-accent mx-auto mb-10 rounded-full"></div>
 
-      <UmkmFilter
-        selectedCategory={selectedCategory}
-        onSelectCategory={setSelectedCategory}
-      />
-
-      <div className="grid grid-cols-1 md:grid-cols-3 mt-5 sm:grid-cols-2 gap-8 place-items-center text-primary">
-        {filteredUmkm.length > 0 ? (
-          filteredUmkm.map((umkm, i) => (
-            <UmkmCard key={i} umkm={umkm} />
-          ))
-        ) : (
-          <section className="min-h-screen text-center flex flex-col justify-center items-center col-span-full">
-            <p className="text-light text-center col-span-full">
-              Tidak ada Kategori UMKM
-            </p>
-          </section>
-        )}
+      <div className="w-full max-w-md mb-8">
+        <SearchBar
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onSearch={() => {}}
+          placeholder="Cari UMKM..."
+        />
       </div>
 
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 text-primary">
+        {filtered.length > 0 ? (
+          filtered.map((umkm, i) => <UmkmCard key={i} umkm={umkm} />)
+        ) : (
+          <p className="text-light/70">UMKM tidak ditemukan.</p>
+        )}
+      </div>
     </section>
   );
 };
