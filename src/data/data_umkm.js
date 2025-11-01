@@ -186,7 +186,7 @@ export const dataUmkm = [
         latitude: -6.915,
         longitude: 107.61,
       },
-      contact: '-082322222646',
+      contact: '082322222646',
       yearEstablished: 2019,
       businessLegalStatus: 'Perorangan',
       businessIdentificationNumber: 'Ada / Tidak Ada',
