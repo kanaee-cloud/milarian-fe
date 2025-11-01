@@ -3,6 +3,7 @@ import Hero from './home/Hero'
 import Category from './home/Category'
 import Review from './home/Review'
 import UmkmList from './home/UmkmList'
+import Feature from './home/Feature'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <Category />
       <UmkmList />
+      <Feature />
       <Review />
     </>
   )

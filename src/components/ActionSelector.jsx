@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search } from "lucide-react"; // ikon dari lucide-react
+import { useNavigate } from "react-router-dom";
+import SearchBar from "./search/SearchBar";
+import { useSearch } from "../context/SearchContext";
 
 const ActionSelector = () => {
   const [mode, setMode] = useState("search");
   const [query, setQuery] = useState("");
+  const { setSearchQuery } = useSearch();
+  const navigate = useNavigate();
 
   const handleSearch = () => {
     if (!query.trim()) return;
-    console.log("Searching for:", query);
+    setSearchQuery(query); 
+    navigate("/umkm"); 
   };
 
   return (
     <div className="w-full text-center text-light">
       <h2 className="text-lg mb-4 font-semibold">Mau Ngapain hari ini?</h2>
-
 
       <div className="flex justify-center gap-3 mb-6">
         <button
@@ -40,7 +44,6 @@ const ActionSelector = () => {
         </button>
       </div>
 
-
       <div className="relative overflow-hidden h-20">
         <AnimatePresence mode="wait">
           {mode === "search" ? (
@@ -52,22 +55,12 @@ const ActionSelector = () => {
               transition={{ duration: 0.4, ease: "easeInOut" }}
               className="relative flex justify-center"
             >
-              <input
-                type="text"
+              <SearchBar
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-                placeholder="Lagi pengen apa?"
-                className="w-full md:text-md text-sm px-4 py-4 pr-12 rounded-full bg-light/10 border border-light/20 focus:outline-none text-light placeholder:text-light/50"
+                onSearch={handleSearch}
+                placeholder="Lagi pengen cari UMKM apa?"
               />
-
-
-              <button
-                onClick={handleSearch}
-                className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-accent text-primary hover:scale-105 transition-transform duration-200"
-              >
-                <Search size={18} />
-              </button>
             </motion.div>
           ) : (
             <motion.div
@@ -79,7 +72,7 @@ const ActionSelector = () => {
               className="flex justify-center"
             >
               <button
-                onClick={() => (window.location.href = "/umkm")}
+                onClick={() => navigate("/umkm")}
                 className="bg-accent text-primary font-semibold px-6 py-2 rounded-xl hover:scale-105 transition-transform duration-200"
               >
                 Lihat Semua UMKM
