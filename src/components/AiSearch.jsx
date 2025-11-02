@@ -133,8 +133,8 @@ export const AiSearch = () => {
                         {result.umkmList.length > 0 ? (
                             <div className={`grid gap-6 ${
                                 result.umkmList.length === 1 
-                                    ? 'grid-cols-1 justify-items-center' 
-                                    : 'grid-cols-1 md:grid-cols-2'
+                                    ? 'grid-cols-1 justify-items-center text-primary' 
+                                    : 'grid-cols-1 md:grid-cols-2 text-primary'
                             }`}>
                                 {result.umkmList.slice(0, 2).map((umkm, i) => (
                                     <UmkmCard key={umkm.basicInfo.businessName || i} umkm={umkm} />

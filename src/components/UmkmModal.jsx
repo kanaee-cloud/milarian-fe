@@ -1,6 +1,12 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { h1 } from "framer-motion/client";
-import { X, MapPin, Clock } from "lucide-react";
+import { X, MapPin, Clock, Instagram  } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import { ProductGallery } from "./ProductGallery";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 
 export const UmkmModal = ({ umkm, onClose }) => {
   if (!umkm) return null;
@@ -78,11 +84,20 @@ export const UmkmModal = ({ umkm, onClose }) => {
               <Clock size={16} className="flex-shrink-0" />
               <span>{umkm.operational?.operatingHours}</span>
             </div>
+            <div className="flex items-center gap-2">
+              <Instagram  size={16} className="flex-shrink-0" />
+              <span>{umkm.marketingAndDigital?.socialMedia?.instagram}</span>
+            </div>
           </div>
 
-        <div className="mb-4 mt-4">
-          <h1 className="font-semibold md:text-xl">Lokasi</h1>
-        </div>
+
+          {umkm.documentation?.product?.length > 0 && (
+            <ProductGallery images={umkm.documentation.product} />
+          )}
+
+          <div className="mb-4 mt-4">
+            <h1 className="font-semibold md:text-xl">Lokasi</h1>
+          </div>
           {umkm.basicInfo?.googleMapsLink && (
             <div className="w-full aspect-video rounded-xl overflow-hidden border border-gray-300">
               <iframe

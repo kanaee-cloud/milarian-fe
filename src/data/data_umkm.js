@@ -38,6 +38,12 @@ export const dataUmkm = [
       paymentMethods: ['Tunai', 'QRIS', 'Debit'],
     },
     documentation: {
+      product: [
+        "https://lh3.googleusercontent.com/p/AF1QipMawIPugmGR1byKjj8A-479dP1dki2dQnD6Bzpl=s1360-w1360-h1020-rw",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxGMSHsGR6eaFsXMVP6Fiaf9zi4mcI1fKwfwjsQkdD76VPJ5Aqo8Jn6ymBF4qniYENQnnOIhiB0GYGeiEA3RINWVIRacB3sTvQLq4CG0NAYzz3UBBLYG0esQF91kjH1Ddv41BcpwA=s1360-w1360-h1020-rw",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzwd7KWlmIxB22ImzjNtsLN_IQBNAh7f9zwGiyL3iNgv8d71ecaI7IaUkDjzZTVp4vnhrdXJerbw4WZ0hzxg_dOvFpDc_LTw0mPsavLPKtrZ4Hcoy5uxPPYaZwTB7lL13lb2wU=s1360-w1360-h1020-rw",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSziy6CpkfZfTqQsFK8vxphyNOZd0yzc1UPKB1a9Y0bFL0gYSk6NlC94XVmaP4PuekVm7GLi3jEtE99WP5LmaSFNrhJLmlGmLpER0I-gX6zi-0Pc10shvatkbLwKTRtrc7LtK7g3=s1360-w1360-h1020-rw"
+      ],
       photos: {
         cover: "https://lh3.googleusercontent.com/p/AF1QipOx838EQX65MNgc1Hvqjys4Ok6Sreu_NMs9ihiE=s1360-w1360-h1020-rw"
       },
@@ -58,7 +64,7 @@ export const dataUmkm = [
     },
     productsAndServices: {
       category: 'Kuliner',
-      featuredProduct: 'Bakso Urat Spesial + Tetelan',
+      featuredProduct: 'Kopi Vietnam Susu Spesial + Egg Coffee',
       priceRange: {
         min: 8000,
         max: 35000,
@@ -82,8 +88,65 @@ export const dataUmkm = [
       paymentMethods: ['Tunai', 'QRIS'],
     },
     documentation: {
+       product: [
+          "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/ef2bf98f-eccc-4cdf-aba9-07239b23d611_Go-Biz_20230731_140514.jpeg",
+          "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/4a82ca9e-892f-4d36-8d43-75c1b8a32a3c_Go-Biz_20241030_183733.jpeg",
+          "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/ca456eee-8f5e-45c6-be3d-ced509274390_Go-Biz_20230731_140647.jpeg",
+          "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSyH26-mUpNnSIuExO-jkqdIa3zFuxh4_cYJPJIOhi-tn-BD-VBrmB1i0i-UDggP7E5TbbmHg9--tZNvl06P0P5E2_d9OfPMFN72QisNc1APESicNthpH6Oc0oBHliT5xjSXJwhCHA=s1360-w1360-h1020-rw",
+          "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwYprieVoai9ozECOHWWnNhjds62U5hP1fVbln_D7_BhuzuPoe6bOeBNnZBOdf4c5GIw6bPOABoKlt7IGQDOWvG8zCZKrwnYkrzOO71aZxFxBRVOM21acG7EPLLaGtoBhZAxOw4=s1360-w1360-h1020-rw"
+        ],
       photos: {
         cover: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxKgjgY2hhnHTRs7cv9pG3AQgH4G5VZdrPLnI1g1o4NuHvHlxiUvsL8KORY0sA3WG5P-FATGH_WNXQJ2wSCQZk2516KIC1zOITSCJP9iYW_FRK1P4-UwC0IPY_p3p0HVX2SAwsm=s1360-w1360-h1020-rw"
+      },
+    },
+  },
+  {
+    basicInfo: {
+      businessName: 'Kopitera',
+      ownerName: 'Yenny Rere Andreastuti',
+      shortDescription:
+        ' Café Kopitera bermula didirikan, hadir ingin menjadi solusi bagi mereka, para pekerja produktif untuk pertemuan dengan klien, atau melobi atau lainnya.',
+      fullAddress: 'Jl. Ir. H. Juanda No.254, Sekeloa, Kecamatan Coblong, Kota Bandung',
+      googleMapsLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63377.15092199178!2d107.54373402167967!3d-6.881986399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7005efb5891%3A0x2f6130f64345b314!2sKopitera%20Dago!5e0!3m2!1sid!2sid!4v1762051015158!5m2!1sid!2sid",
+      contact: '085713596140',
+      yearEstablished: 2023,
+      businessLegalStatus: 'Perorangan',
+      businessIdentificationNumber: 'Ada / Tidak Ada',
+    },
+    productsAndServices: {
+      category: 'Kuliner',
+      featuredProduct: 'Kopi Susu Kopitera + Ayam Geprek Sambal Matah',
+      priceRange: {
+        min: 26000,
+        max: 95000,
+      },
+      targetMarket: ['Mahasiswa', 'Pelajar', 'Keluarga', 'Profesional Muda'],
+      usp: 'Kopi autentik dengan bahan berkualitas',
+      certification: 'Halal (sudah tersertifikasi)',
+    },
+    operational: {
+      operatingHours: '07:00 - 23:00 (Setiap Hari)',
+      numberOfEmployees: 7,
+      capacity: 'Kursi Kecil di dalam kedai, layanan bawa pulang',
+    },
+    marketingAndDigital: {
+      socialMedia: {
+        instagram: '@kopiteraid',
+      },
+      marketplace: null,
+      deliveryApps: ['GoFood', 'GrabFood', 'ShopeeFood'],
+      website: null,
+      paymentMethods: ['Tunai', 'QRIS'],
+    },
+    documentation: {
+       product: [
+          "https://lh3.googleusercontent.com/p/AF1QipN82Oiwpw8QMyUYpIa5iVLlM_ytUjyGeauNKbdy=s1360-w1360-h1020-rw",
+          "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzGgLNEucuDFU3qoV1aOE6ZAsw72E2IAU2fQeX8nSBQFzyycnHDwUTBBDm5B4BqsVXT-yGR32xhVq9L6WNuRJnLpL61PL2flsAKyDil0Go9mqSg48E74T1wgWOOU0AdpBpNP_URgbI_CWt8=s1360-w1360-h1020-rw",
+          "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzG7YOjVbKad5oWjy7T6QFGZk8JFNzIeNftB8x8BfbTccYNFjHk-VS1p75TVDKjM6afzcWqlb2-OjZW6Bn57shIEAxeW5ipGiA2kFdFThbIfDIP420H-JcsFdukGsw6ie2NsqM=s1360-w1360-h1020-rw",
+          "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSywqkqE0hUClNqh4tHVImAcP24LJz58kc9-qwjKthMYkIKBIefLpjyuczSFM9H5xs0Tdwo5t42WJc8KNmWqwIPKXfMpB5JUVL2djfrtjkK9kbb0aTmzxXH6xw5HKYD2xd1epa6xyvue2QeD=s1360-w1360-h1020-rw"
+        ],
+      photos: {
+        cover: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzfShzj3sPI5XaolTwkbhlPH3R45ihBDes573FM1qpr9mYoxY-fvIXPqVeGJ0pxT7M4buFlrBe87fOd7P_MgB6IWNmmZvqQW0wOYqYMz6jpKnnhmTIhXnt9juSxFRUQ0kdborozZQlT_abN=s1360-w1360-h1020-rw"
       },
     },
   },
@@ -126,6 +189,12 @@ export const dataUmkm = [
       paymentMethods: ['Tunai', 'QRIS'],
     },
     documentation: {
+      product: [
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSyXW5DyaOwftDTnu1k9_dEloNbH7d-X-T0cKb48XjAgQKLgFmjaTbFIVeFBUgduMS7URABGym1qlFaPQKl-dVj2If35vaPr9LVZp2DZd4diMpXqZ-v2kMFF4kQsKtpF_L8hnUmH0Q=s1360-w1360-h1020-rw",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwfUsuvrNPCO9ipaQlhFNVOrQ3HxGY8N9Bp8c0GUL7xfK65zXqD8eUSc2XcNtCmZkDbernfVoa9OO8fNYcwhm4LZBj2NrBqlGphCmrYDYJo7An0Bb6X3gwKraC7GrNZMcSCif-z=s1360-w1360-h1020-rw",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxwR9_uV7CMoY0gSHJYEdqTdh90J1eSCKgxNMQrRL4Cl7ezvehydZGLBE2C0C351Xb_sWrXWmUj6ydEbrFBRaXoKYeZhrO3jlVNsG52JvTXCUV1Fltalk-n04v89AtP3W55of8FZz8VyEU=s1360-w1360-h1020-rw",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxyqx666f262y7-ZkhbJ08FfFIhfUjQ2KVcB8NmH0cA2uxaMiMJY6hd6u470n4lWOF-QcNBvEu1y-cfXJvcL9iEk0pXPh3lFlLOGRL34MLyT3uNmw3pU1terUojYMKrNWC4BqI=s1360-w1360-h1020-rw"
+      ],
       photos: {
         cover: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSws_Aj1yoSI_N5Vj5_GASzYXprtJ4uaGECzjS9VpLVIC2ChedatPxqQRaI5XkL4jR2NhGEexkdM_sKwrHOk9Zs73_q5UqDIIyzTzYW81ciJ9wmof5IELBvgpOubY5kS0zOuPO6O=s1360-w1360-h1020-rw"
     },
@@ -216,6 +285,14 @@ export const dataUmkm = [
       paymentMethods: ['Tunai', 'QRIS'],
     },
     documentation: {
+      product: [
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxyqx666f262y7-ZkhbJ08FfFIhfUjQ2KVcB8NmH0cA2uxaMiMJY6hd6u470n4lWOF-QcNBvEu1y-cfXJvcL9iEk0pXPh3lFlLOGRL34MLyT3uNmw3pU1terUojYMKrNWC4BqI=s1360-w1360-h1020-rw",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzBYFoMYdlpIgLnYkJAb5AMI0uKNrvM1l1uHWpV7zbQ10sVdxBYpUjH2SbP9uVE5n8lTpzQi9zQeVdw5wTa7iPH4YxeLfFQ0nUSi6S_0UJ9b2OGphYd1WtPORuTUiuwHL6OzUOk=s1360-w1360-h1020-rw",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSy2LN7CIMhDInCpuOpsgFwUz7RzfudDDdL0RPIm9HgLa2lYGXkRnKZZZTOqVMilwCiQVEQm4VN9yrfoc_EZSxvqCRSEqX9JyAWnPf2pF3-VUd-EO_syjym2hmNRA4h83BDb8Xd0eg=s1360-w1360-h1020-rw",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzUS5gNMRlTkjNI6jOxDqj_PuOPdjyKzlyQJXTIo8ZlHN_yN2kWl-9YkWUHHiuKfDUWl3eXUP4enhKNzI6LiR8LZ3Za3rxZWzeiutadkcjaRN9zdGKM2BgTwIay168blFo4pJu6oZw806k=w141-h118-n-k-no-nu",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSz5VPM5HE4sA6VUkEKEtL_75-PTkSw4TUTqxIY6iql0w5xga6DxkD8bwjRcsYtGWv1FkRFq5yFtwfh53JYUAZ7-aen5eKE8B8yOP2g5y1RWChh6YkiqtwicDyqDBAdnTkus8fnM=s1360-w1360-h1020-rw",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSyfNIsW1YfDK-XMaVMdtYwkME9q_sQ6idlaJaTjluLzRZJ-Uf99B1oMsuBcFeEqvqWDYY9BUZP7dklaR0ctFBOl332TDI1XOc9yE4nuFZMbMpHagHDTNSnr2yPG0BWpsofdXO1N=w141-h176-n-k-no-nu"
+      ],
       photos: {
         cover: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSz25hz7AGm4_R7uiQPC4HHeFhLfPi05h1CsQwwTIUkLFU7uCyfayLhuTNpaYAwKWiIqCtsJBhtP_aaTncmQ3Whp_audMKJ9WGZ1aJUxufIYRY9bL2hLlL8bDgjoSyDSnJPDOHSL=s1360-w1360-h1020-rw"
       },
@@ -260,6 +337,7 @@ export const dataUmkm = [
     },
     documentation: {
       photos: {
+       
         cover: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxZCFaBAt0L4xcdmh_CdOdlfoVRSxgBa0auUMQLcYSzjPV9j5xkq7Kt8Sqa3rOleIqfAETbuZjsOmRcuXPG6ptDg1X_OHRgExujWADfXtlxDlrjeyhDf69LsiDkNOCvVq7cXapc=s1360-w1360-h1020-rw"
       },
     },
@@ -281,7 +359,7 @@ export const dataUmkm = [
       featuredProduct: 'Servis Hp, Laptop dan PC',
       priceRange: {
         min: 50000,
-        max: null,
+        max: 2000000,
       },
       targetMarket: ['Mahasiswa', 'Pelajar', 'Keluarga'],
       usp: '-',
@@ -302,6 +380,12 @@ export const dataUmkm = [
       paymentMethods: ['Tunai', 'QRIS'],
     },
     documentation: {
+      product: [
+        "https://lh3.googleusercontent.com/p/AF1QipP-E6AA8LoCcKY76pJd40mR3CDTNd7ZCG1B5qOl=s1360-w1360-h1020-rw",
+        "https://lh3.googleusercontent.com/p/AF1QipNkP3pkU1gqucKoc5bGOZvyEpWqjCvuCGAlt2LI=s1360-w1360-h1020-rw",
+        "https://lh3.googleusercontent.com/p/AF1QipOwn6986PvOS-Tp_Q8FPnK7orC0qajHaChBq6Ac=s1360-w1360-h1020-rw",
+        "https://lh3.googleusercontent.com/p/AF1QipPoOO9AAIp2K2S0hyPCx0gwxNeGX0V3CRWOA4bJ=s1360-w1360-h1020-rw"
+      ],
       photos: {
         cover: "https://lh3.googleusercontent.com/p/AF1QipNC5y4njr26BRlW4AaLWJ63vLDagPWHyHxHTFB4=s1360-w1360-h1020-rw"
       },

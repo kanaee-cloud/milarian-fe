@@ -12,7 +12,7 @@ body {
   -webkit-backdrop-filter: blur(5px);
   border-radius: 20px;
   /* border: 1px solid rgba(255, 255, 255, 0.3); */
-  box-shadow: 
+  box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.5),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1),
@@ -28,12 +28,10 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.8),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.8),
+      transparent);
 }
 
 .glass-card::after {
@@ -43,10 +41,37 @@ body {
   left: 0;
   width: 1px;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.8),
-    transparent,
-    rgba(255, 255, 255, 0.3)
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.8),
+      transparent,
+      rgba(255, 255, 255, 0.3));
+}
+
+.product-gallery .swiper-pagination-bullet {
+  background-color: #ff0000;
+  /* accent */
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.product-gallery .swiper-pagination-bullet:hover,
+.product-gallery .swiper-pagination-bullet-active {
+  background-color: #3d0000;
+  /* primary on hover/active */
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.product-gallery .swiper-button-next,
+.product-gallery .swiper-button-prev {
+  color: #ff0000;
+  /* accent */
+  transition: all 0.3s ease;
+}
+
+.product-gallery .swiper-button-next:hover,
+.product-gallery .swiper-button-prev:hover {
+  color: #3d0000;
+  /* primary on hover */
+  transform: scale(1.1);
 }
