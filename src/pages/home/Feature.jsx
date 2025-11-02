@@ -12,7 +12,7 @@ const Feature = () => {
                     Stop scroll tanpa henti. Cukup deskripsikan apa yang kamu butuhin, dan biarkan Gemini memberikan rekomendasi paling personal buat kamu.
                 </p>
             </div>
-            <button className='mt-4 py-4 px-8 bg-accent flex items-center gap-x-4 text-dark font-semibold rounded-full hover:bg-gray hover:text-accent transition-all duration-500'>
+            <button className='mt-4 py-4 px-8 bg-accent flex items-center gap-x-4 text-light font-semibold rounded-full hover:bg-gray hover:text-accent transition-all duration-500'>
 
                 <span>
                     Coba Fitur
