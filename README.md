@@ -1,16 +1,121 @@
-# React + Vite
+# Milarian - UMKM Discovery Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Milarian is a modern web application designed to help users discover and connect with UMKM (Usaha Mikro, Kecil, dan Menengah - Micro, Small, and Medium Enterprises) in Bandung, Indonesia. The platform features an AI-powered search system using Google's Gemini model to provide personalized UMKM recommendations.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Smart UMKM Search**: Advanced search functionality with AI-powered recommendations
+- **Category Filtering**: Browse UMKMs by categories (Kuliner, Fashion, Kriya, Jasa, etc.)
+- **Detailed Business Profiles**: Comprehensive information including:
+  - Business descriptions
+  - Price ranges
+  - Operating hours
+  - Location details
+  - Product photos and galleries
+- **AI-Powered Recommendations**: Gemini AI integration for personalized UMKM suggestions
+- **Responsive Design**: Mobile-first approach with a clean, modern interface
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework**: React.js with Vite
+- **Styling**: TailwindCSS
+- **State Management**: React Context API
+- **Data Fetching**: TanStack Query (React Query)
+- **Routing**: React Router v6
+- **AI Integration**: Google Gemini API
+- **UI Components**: Custom components with Lucide icons
+- **Deployment**: Vercel
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+```bash
+git clone https://github.com/kanaee-cloud/milarian-fe.git
+cd milarian-fe
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create a `.env` file in the root directory and add your Gemini API key:
+```env
+VITE_GEMINI_API_KEY=your_api_key_here
+```
+
+4. Start the development server:
+```bash
+npm run dev
+```
+
+## 🔧 Environment Setup
+
+Make sure you have the following installed:
+- Node.js (v16 or higher)
+- npm or yarn
+- Modern web browser
+
+## 📁 Project Structure
+
+```
+milarian-fe/
+├── src/
+│   ├── api/            # API integration layers
+│   ├── components/     # Reusable UI components
+│   ├── context/        # React Context providers
+│   ├── data/          # Static data and mock services
+│   ├── hooks/         # Custom React hooks
+│   ├── layouts/       # Page layout components
+│   ├── pages/         # Page components
+│   └── routes/        # Route configurations
+├── public/            # Static assets
+└── ...config files
+```
+
+## 🎨 Features in Detail
+
+### AI-Powered Search
+- Natural language processing for understanding user needs
+- Contextual recommendations based on user preferences
+- Integration with Google's Gemini model for smart suggestions
+
+### UMKM Categories
+- Kuliner (Culinary)
+- Fashion
+- Kriya (Crafts)
+- Jasa (Services)
+- And more...
+
+### Business Profile Features
+- Comprehensive business information
+- Photo galleries
+- Price range indicators
+- Location and operating hours
+- Target market information
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- Google Gemini API for AI capabilities
+- TailwindCSS for styling utilities
+- React ecosystem and community
+- All contributors and UMKM partners
+
+## 📫 Contact
+
+For questions and support, please open an issue in the GitHub repository or contact the maintainers directly.
+
+---
+Built with ❤️ for UMKMs in Bandung
