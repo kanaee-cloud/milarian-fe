@@ -240,6 +240,11 @@ export const dataUmkm = [
       paymentMethods: ['Tunai', 'QRIS'],
     },
     documentation: {
+      product: [
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwso1603YYY_WDHVJio22lrYBABortKyPYrkOQqoAPDKswQ3kxcrElz-mSEWgy3V8hinycRLs_b_wyHavXUdOVNKtw4HdituIR7-oVFbujZ2ki-_dvNGCjf81hL-MHSjtOxJThjNg_4bAw-=w203-h270-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSx9n7fMhNx2QomavW2kEBNUsODQ1D5nGxGfJqjxFSn3A_3XA1We50iovVQYe_eL5EROyVFRcxr0NhLlUqE1q5S6Gu_FbcAdv0oJUyMoDYP9vxuaI5LydqV1mW160zMy6Yuh52J2_1U7bJ9q=s387-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSy08AImR0g5qSLmceyl5fJ50yGcoWeNbmqNe1wMBiWR5DgUO3mlH307uU4G01FquPZTlJldLlEZhRjVORmmo3KxUToUZgHz7vS6aCm6q8NKrcMW_71lZMbdlt6I0mzj_amQu9dfUzpLYNci=w203-h270-k-no",
+      ],
       photos: {
         cover: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwBJiBbm1BXkx8FY8rTSz3Aev2DESnSCwKAFW3oYfTcgSCRA5IC-2XHhfeLNLyCvWlqjMHsnITjCPB-8msUDwZr_cZi_-5MEhnFXKVzogL0IjMsiXUrdiDBZPv7skldU-P17c9PevWleMY=s1360-w1360-h1020-rw"
       },
@@ -336,8 +341,12 @@ export const dataUmkm = [
       paymentMethods: ['Tunai', 'QRIS'],
     },
     documentation: {
+      product: [
+        "https://lh3.googleusercontent.com/p/AF1QipPyFUdRWVB6u5w6dP0jLeHtO516FOS5JHZitqvN=w203-h270-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwig_dsrev_XIVJHD2PW4pBlRA6uOH0kt_qd_SG38DQCs3HyCfOS8kTDX1uXgWIVH9zfs3JjNNp5WDgabg9qFIImqRnbc7vLZL-XW-KLBKz64RCwr6e7RVMZqxUbouWRcVg5Zk9=w203-h152-k-no",
+        "https://lh3.googleusercontent.com/p/AF1QipPf96uMaNgKvroihfurzzvt3CDuuiAdJkcNL0x0=w203-h270-k-no",
+      ],
       photos: {
-       
         cover: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxZCFaBAt0L4xcdmh_CdOdlfoVRSxgBa0auUMQLcYSzjPV9j5xkq7Kt8Sqa3rOleIqfAETbuZjsOmRcuXPG6ptDg1X_OHRgExujWADfXtlxDlrjeyhDf69LsiDkNOCvVq7cXapc=s1360-w1360-h1020-rw"
       },
     },
@@ -432,6 +441,54 @@ export const dataUmkm = [
     documentation: {
       photos: {
         cover: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxG8m_Trn9LepB-42OwHv_ZYVixI0KPp1mQubHdf9EWDQgt5S_-SRDg2h622ltEbhU5_kASr8Cs2tX1bVTW2EKrvb3b106c9SWgtbC0focIvfBBxYxMYpqJDYVHfpIWpDxyfMSo_w=s1360-w1360-h1020-rw"
+      },
+    },
+  },
+  {
+    basicInfo: {
+      businessName: 'Ayam SPG',
+      ownerName: ' Arif Ansor Nur Fatwa',
+      shortDescription: 'Kuliner ayam goreng serundeng yang disajikan dengan samba hijaunya yang khas.',
+      fullAddress: 'Jl. Balonggede No.57, Balonggede, Kec. Regol, Kota Bandung',
+      googleMapsLink: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3960.710211135125!2d107.6071972!3d-6.925202199999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e73b7f220d0f%3A0xa01d6b8eb41b72f5!2sWarung%20Nasi%20Ayam%20SPG!5e0!3m2!1sid!2sid!4v1762067010996!5m2!1sid!2sid",
+      contact: '082219899955',
+      yearEstablished: "",
+      businessLegalStatus: 'Perorangan',
+      businessIdentificationNumber: 'Ada / Tidak Ada',
+    },
+    productsAndServices: {
+      category: 'Kuliner',
+      featuredProduct: 'Ayam Goreng Serundeng',
+      priceRange: {
+        min: 25000,
+        max: 50000,
+      },
+      targetMarket: ['Mahasiswa', 'Pelajar', 'Keluarga'],
+      usp: '-',
+      certification: '-',
+    },
+    operational: {
+      operatingHours: '09:00 - 20:00 (Senin - Minggu)',
+      numberOfEmployees: 5,
+      capacity: 'Lebih dari 20 orang',
+    },
+    marketingAndDigital: {
+      socialMedia: {
+        instagram: '-',
+      },
+      marketplace: null,
+      deliveryApps: ['GoFood', 'GrabFood', 'ShopeeFood'],
+      website: "-",
+      paymentMethods: ['Tunai', 'QRIS'],
+    },
+    documentation: {
+      product: [
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxXTeCejyTzdUu36MFrz_FErRbJPPtZ700qrI1YcbDbp90bbJgWEBlpB-Q7whDBRzEERg3Cjie3P3SxTaA4k1mcXouHZMgXZl0WbyOYQ605v_CVnLZ_eBRhO01u-AoU_vvBxmE6=w203-h270-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSx8LuH4Ghs49WCkIWcA_4xrga2ws2rG-HmVGYM0hS3qN15j9VoOcRdTHkL0gZ7JZ3mui0vooci32a-ldoYejHViRmk7wmCKq33xNf4m3Z7_eB4iPHvN-JUFsh2OZ2rBGPouFSlT6g=w203-h270-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxrOi4l_hSaNwn-WYynx8Xsl-XsGOySKnnCqTwE4WwdvzJDQhZzJU7LmDAM-nqBQDWkFTcvSJ4mTF6dq4mpzRNtDHvxe8wJW_UN1fUG01qVk_1cWc_WsCJWlDbIhMa0Vn4En6Dg=w203-h270-k-no",
+      ],
+      photos: {
+        cover: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzVXWYMiXnnir8gT4oaF3XfdpNniTsieKQw-JPXD2d0R7go7SVui6DZLB3loFRgpzB_l2LfGWSnYBY3Fy_PaTW-H407J3nufRcTgs99TOAWSrk34L4drBu_A0N2WXcoalJ9sSnf=s677-k-no"
       },
     },
   },
