@@ -1,4 +1,4 @@
-// AiSearch.js (Cleaned and Optimized)
+// AiSearch.js (Fixed with Better JSON Cleaning)
 
 import React, { useState } from "react";
 import { UmkmCard } from "./UmkmCard";
@@ -13,29 +13,95 @@ export const AiSearch = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [hasSearched, setHasSearched] = useState(false);
 
+    const cleanJsonString = (jsonStr) => {
+        let cleaned = jsonStr
+            // Hapus markdown code blocks
+            .replace(/```json\n?/g, '')
+            .replace(/```\n?/g, '')
+            // Hapus trailing commas sebelum ] atau }
+            .replace(/,(\s*[}\]])/g, '$1')
+            // Fix escaped quotes yang salah
+            .replace(/\\"/g, '"')
+            // Hapus control characters
+            .replace(/[\x00-\x1F\x7F]/g, '')
+            .trim();
+        
+        // Coba fix common JSON issues
+        try {
+            // Test parse dulu
+            JSON.parse(cleaned);
+            return cleaned;
+        } catch (e) {
+            console.warn("First parse attempt failed, trying aggressive cleaning...");
+            // Aggressive cleaning jika gagal
+            cleaned = cleaned
+                .replace(/,(\s*[}\]])/g, '$1') // Trailing commas lagi
+                .replace(/\n/g, ' ') // Hapus newlines
+                .replace(/\r/g, ' ') // Hapus carriage returns
+                .replace(/\t/g, ' ') // Hapus tabs
+                .replace(/\s{2,}/g, ' '); // Multiple spaces jadi single
+            return cleaned;
+        }
+    };
+
     const parseAiResponse = (responseText) => {
-        const jsonMatch = responseText.match(/(\[.*\])/s);
+        console.log("Raw Response:", responseText); // Debug
+        
+        // Extract narrative dan JSON secara terpisah
+        const parts = responseText.split(/(\[[\s\S]*\])/);
+        let narrativePart = "";
+        let jsonPart = null;
+        
+        // Cari JSON array
+        for (let part of parts) {
+            if (part.trim().startsWith('[') && part.trim().endsWith(']')) {
+                jsonPart = part;
+            } else if (part.trim()) {
+                narrativePart += part.trim() + " ";
+            }
+        }
 
-        if (jsonMatch && jsonMatch[1]) {
-            const jsonPart = jsonMatch[1];
-            const narrativePart = responseText.substring(0, jsonMatch.index).trim();
-
+        if (jsonPart) {
             try {
-                const recommendedList = JSON.parse(jsonPart);
+                // Clean JSON sebelum parse
+                const cleanedJson = cleanJsonString(jsonPart);
+                console.log("Cleaned JSON (first 500 chars):", cleanedJson.substring(0, 500)); // Debug
+                
+                const recommendedList = JSON.parse(cleanedJson);
+                
+                // Validasi array
+                if (!Array.isArray(recommendedList)) {
+                    throw new Error("Bukan array");
+                }
+                
+                console.log("✅ Parse berhasil! Found", recommendedList.length, "UMKM");
+                
                 return {
-                    narrative: narrativePart,
+                    narrative: narrativePart.trim() || "Berikut rekomendasi UMKM untuk Anda:",
                     umkmList: recommendedList,
                 };
             } catch (e) {
-                console.error("Gagal parsing JSON dari AI:", e);
+                console.error("❌ Gagal parsing JSON:", e.message);
+                console.error("Error at position:", e.message.match(/position (\d+)/)?.[1]);
+                
+                // Show context around error
+                if (jsonPart) {
+                    const errorPos = parseInt(e.message.match(/position (\d+)/)?.[1] || 0);
+                    const start = Math.max(0, errorPos - 100);
+                    const end = Math.min(jsonPart.length, errorPos + 100);
+                    console.error("Context around error:", jsonPart.substring(start, end));
+                }
+                
                 return {
-                    narrative: "Terjadi kesalahan saat memproses data. Coba lagi.",
+                    narrative: "Maaf, sistem kesulitan memproses rekomendasi. Silakan coba lagi dengan deskripsi yang lebih spesifik.",
                     umkmList: [],
                 };
             }
         } else {
+            // Tidak ada JSON array ditemukan
+            console.warn("⚠️ Tidak ditemukan JSON array dalam response");
             return {
-                narrative: responseText,
+                narrative: responseText || "Tidak ada rekomendasi yang sesuai dengan pencarian Anda.",
                 umkmList: [],
             };
         }
@@ -137,7 +203,7 @@ export const AiSearch = () => {
                                     : 'grid-cols-1 md:grid-cols-2 text-primary'
                             }`}>
                                 {result.umkmList.slice(0, 2).map((umkm, i) => (
-                                    <UmkmCard key={umkm.basicInfo.businessName || i} umkm={umkm} />
+                                    <UmkmCard key={umkm?.basicInfo?.businessName || i} umkm={umkm} />
                                 ))}
                             </div>
                         ) : (

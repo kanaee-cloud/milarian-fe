@@ -14,7 +14,7 @@ const SearchBar = ({ value, onChange, onSearch, placeholder = "Cari UMKM..." }) 
       />
       <button
         onClick={onSearch}
-        className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-accent text-primary hover:scale-105 transition-transform duration-200"
+        className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-accent text-white hover:scale-105 transition-transform duration-200"
       >
         <Search size={18} />
       </button>
