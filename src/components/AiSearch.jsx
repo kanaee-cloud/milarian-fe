@@ -13,27 +13,42 @@ export const AiSearch = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [hasSearched, setHasSearched] = useState(false);
 
-    const parseAiResponse = (responseText) => {
-        const jsonMatch = responseText.match(/(\[.*\])/s);
+const parseAiResponse = (responseText) => {
+        // Temukan indeks awal dan akhir dari array JSON
+        const jsonStart = responseText.indexOf('[');
+        const jsonEnd = responseText.lastIndexOf(']');
 
-        if (jsonMatch && jsonMatch[1]) {
-            const jsonPart = jsonMatch[1];
-            const narrativePart = responseText.substring(0, jsonMatch.index).trim();
+        // Pastikan keduanya ditemukan dan dalam urutan yang benar
+        if (jsonStart > -1 && jsonEnd > -1 && jsonEnd > jsonStart) {
+            
+            // Ekstrak bagian JSON secara presisi
+            const jsonPart = responseText.substring(jsonStart, jsonEnd + 1); // +1 untuk menyertakan ']'
+            
+            // Ekstrak bagian narasi (semua teks SEBELUM JSON)
+            const narrativePart = responseText.substring(0, jsonStart).trim();
 
             try {
+                // Parse hanya bagian JSON yang sudah bersih
                 const recommendedList = JSON.parse(jsonPart);
+                
                 return {
-                    narrative: narrativePart,
+                    // Beri fallback jika AI "lupa" memberi narasi
+                    narrative: narrativePart || "Berikut rekomendasi untuk Anda:", 
                     umkmList: recommendedList,
                 };
             } catch (e) {
-                console.error("Gagal parsing JSON dari AI:", e);
+                console.error("Gagal parsing JSON dari AI (error):", e);
+                // Log ini sangat membantu untuk debugging
+                console.error("Data mentah yang gagal di-parse:", jsonPart); 
                 return {
                     narrative: "Terjadi kesalahan saat memproses data. Coba lagi.",
                     umkmList: [],
                 };
             }
         } else {
+            // Jika tidak ada array JSON '[...]', anggap seluruh respons adalah narasi
+            // (misalnya, AI hanya menjawab "Maaf, saya tidak mengerti")
+            console.warn("Respons AI tidak mengandung JSON array yang valid.");
             return {
                 narrative: responseText,
                 umkmList: [],
