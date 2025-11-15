@@ -26,19 +26,7 @@ const Category = () => {
     {
       name: "Jasa",
       icon: HardHat 
-    },
-    {
-      name: "Jasa",
-      icon: HardHat 
-    },
-    {
-      name: "Jasa",
-      icon: HardHat 
-    },
-    {
-      name: "Jasa",
-      icon: HardHat 
-    },
+    }
   ]
 
   const container = {
@@ -66,7 +54,7 @@ const Category = () => {
 
   return (
     <>
-    <section ref={ref} className='min-h-screen text-light'>
+    <section ref={ref} className='text-light mb-12'>
         <motion.h1 
           className='font-semibold text-2xl'
           initial={{ opacity: 0, y: 20 }}
