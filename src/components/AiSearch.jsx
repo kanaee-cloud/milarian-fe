@@ -1,5 +1,3 @@
-// AiSearch.js (Cleaned and Optimized)
-
 import React, { useState } from "react";
 import { UmkmCard } from "./UmkmCard";
 import { Loader2, Sparkles } from "lucide-react";
@@ -13,47 +11,118 @@ export const AiSearch = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [hasSearched, setHasSearched] = useState(false);
 
-const parseAiResponse = (responseText) => {
-        // Temukan indeks awal dan akhir dari array JSON
-        const jsonStart = responseText.indexOf('[');
-        const jsonEnd = responseText.lastIndexOf(']');
-
-        // Pastikan keduanya ditemukan dan dalam urutan yang benar
-        if (jsonStart > -1 && jsonEnd > -1 && jsonEnd > jsonStart) {
-            
-            // Ekstrak bagian JSON secara presisi
-            const jsonPart = responseText.substring(jsonStart, jsonEnd + 1); // +1 untuk menyertakan ']'
-            
-            // Ekstrak bagian narasi (semua teks SEBELUM JSON)
-            const narrativePart = responseText.substring(0, jsonStart).trim();
-
-            try {
-                // Parse hanya bagian JSON yang sudah bersih
-                const recommendedList = JSON.parse(jsonPart);
-                
-                return {
-                    // Beri fallback jika AI "lupa" memberi narasi
-                    narrative: narrativePart || "Berikut rekomendasi untuk Anda:", 
-                    umkmList: recommendedList,
-                };
-            } catch (e) {
-                console.error("Gagal parsing JSON dari AI (error):", e);
-                // Log ini sangat membantu untuk debugging
-                console.error("Data mentah yang gagal di-parse:", jsonPart); 
-                return {
-                    narrative: "Terjadi kesalahan saat memproses data. Coba lagi.",
-                    umkmList: [],
-                };
-            }
-        } else {
-            // Jika tidak ada array JSON '[...]', anggap seluruh respons adalah narasi
-            // (misalnya, AI hanya menjawab "Maaf, saya tidak mengerti")
-            console.warn("Respons AI tidak mengandung JSON array yang valid.");
-            return {
-                narrative: responseText,
-                umkmList: [],
-            };
+ const parseAiResponse = (responseText) => {
+        const start = responseText.indexOf("[");
+        if (start === -1) {
+            return { narrative: responseText, umkmList: [] };
         }
+
+        let depth = 0;
+        let end = -1;
+        for (let i = start; i < responseText.length; i++) {
+            const ch = responseText[i];
+            if (ch === "[") depth++;
+            else if (ch === "]") {
+                depth--;
+                if (depth === 0) {
+                    end = i;
+                    break;
+                }
+            }
+        }
+
+        if (end === -1) {
+            return { narrative: responseText, umkmList: [] };
+        }
+
+        const jsonPart = responseText.substring(start, end + 1);
+        const narrativePart = responseText.substring(0, start).trim();
+
+        const cleaned = jsonPart.replace(/,\s*([}\]])/g, "$1");
+
+        let recommendedList = null;
+        try {
+            recommendedList = JSON.parse(cleaned);
+        } catch (e) {
+            const objs = [];
+            for (let i = 0; i < cleaned.length; i++) {
+                if (cleaned[i] === "{") {
+                    let depthObj = 0;
+                    let j = i;
+                    for (; j < cleaned.length; j++) {
+                        if (cleaned[j] === "{") depthObj++;
+                        else if (cleaned[j] === "}") {
+                            depthObj--;
+                            if (depthObj === 0) break;
+                        }
+                    }
+                    if (j > i) {
+                        let objStr = cleaned.substring(i, j + 1);
+                        objStr = objStr.replace(/,\s*([}\]])/g, "$1");
+                        try {
+                            const parsedObj = JSON.parse(objStr);
+                            objs.push(parsedObj);
+                        } catch (ee) {
+                           
+                        }
+                        i = j;
+                    }
+                }
+            }
+
+            if (objs.length > 0) {
+                recommendedList = objs;
+            } else {
+                console.error("Gagal parsing JSON dari AI:", e);
+                console.debug("AI JSON candidate (cleaned):", cleaned);
+                return { narrative: responseText, umkmList: [] };
+            }
+        }
+
+        if (!Array.isArray(recommendedList)) {
+            recommendedList = [recommendedList];
+        }
+
+
+        const normalized = recommendedList.map((u) => {
+                const basicInfo = u.basicInfo || {};
+                const products = u.productsAndServices || {};
+                const priceRange = products.priceRange || { min: 0, max: 0 };
+                return {
+                    basicInfo: {
+                        businessName: basicInfo.businessName || "UMKM",
+                        ownerName: basicInfo.ownerName || "",
+                        shortDescription: basicInfo.shortDescription || "-",
+                        fullAddress: basicInfo.fullAddress || "-",
+                        googleMapsLink: basicInfo.googleMapsLink || null,
+                        contact: basicInfo.contact || null,
+                        yearEstablished: basicInfo.yearEstablished || null,
+                        businessLegalStatus: basicInfo.businessLegalStatus || null,
+                        businessIdentificationNumber: basicInfo.businessIdentificationNumber || null,
+                    },
+                    productsAndServices: {
+                        category: products.category || "",
+                        featuredProduct: products.featuredProduct || "",
+                        priceRange: {
+                            min: typeof priceRange.min === "number" ? priceRange.min : Number(priceRange.min) || 0,
+                            max: typeof priceRange.max === "number" ? priceRange.max : Number(priceRange.max) || 0,
+                        },
+                        targetMarket: Array.isArray(products.targetMarket) ? products.targetMarket : (products.targetMarket ? [products.targetMarket] : []),
+                        usp: products.usp || "",
+                        certification: products.certification || null,
+                    },
+                    operational: {
+                        operatingHours: (u.operational && u.operational.operatingHours) || "-",
+                        numberOfEmployees: (u.operational && u.operational.numberOfEmployees) || 0,
+                        capacity: (u.operational && u.operational.capacity) || "",
+                    },
+                    marketingAndDigital: u.marketingAndDigital || {},
+                    documentation: u.documentation || { photos: { cover: null }, product: [] },
+                };
+            });
+
+            console.debug("Normalized AI recommended UMKM:", normalized);
+            return { narrative: narrativePart, umkmList: normalized };
     };
 
     const handleSearch = async () => {
@@ -67,6 +136,7 @@ const parseAiResponse = (responseText) => {
         try {
             const aiResponse = await fetchGeminiResponse(prompt, dataUmkm);
             const parsedResult = parseAiResponse(aiResponse);
+            console.debug("Parsed AI result:", parsedResult);
             setResult(parsedResult);
         } catch (e) {
             console.error("Error fetching from Gemini:", e);
